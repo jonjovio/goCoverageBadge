@@ -1,4 +1,4 @@
-name: Generate code coverage badge
+name: Go Coverage Badge
 
 on:
   pull_request:
