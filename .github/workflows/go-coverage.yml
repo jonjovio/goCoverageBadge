@@ -12,9 +12,9 @@ jobs:
 
     steps:
     - name: Set up Go
-      uses: actions/setup-go@v3
+      uses: actions/setup-go@v4
       with:
-        go-version-file: 'go.mod' # Use the Go version of your project
+        go-version-file: 'go.mod'
 
     - name: Check out code
       uses: actions/checkout@v3
