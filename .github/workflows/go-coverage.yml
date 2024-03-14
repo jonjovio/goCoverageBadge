@@ -23,7 +23,7 @@ jobs:
       run: go test ./... -coverprofile=coverage.out
 
     - name: Go Coverage Badge
-      uses: romeovs/go-coverage-badge@master
+      uses: tj-actions/coverage-badge-go@v2
       with:
         path: ./coverage.out
         readme-path: ./README.md # Adjust if your README is located elsewhere
