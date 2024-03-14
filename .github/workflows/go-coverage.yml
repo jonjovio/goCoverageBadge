@@ -1,0 +1,29 @@
+name: Go Coverage Badge
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: 1.21.6 # Use the Go version of your project
+
+    - name: Check out code
+      uses: actions/checkout@v4
+
+    - name: Test with coverage
+      run: go test ./... -coverprofile=coverage.out
+
+    - name: Go Coverage Badge
+      uses: romeovs/go-coverage-badge@master
+      with:
+        path: ./coverage.out
+        readme-path: ./README.md # Adjust if your README is located elsewhere
