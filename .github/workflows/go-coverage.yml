@@ -47,5 +47,5 @@ jobs:
       if: steps.verify-changed-files.outputs.files_changed == 'true'
       uses: ad-m/github-push-action@master
       with:
-        github_token: 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
+        github_token: ${{ secrets.TUGASPBP }}
         branch: ${{ github.head_ref }}
